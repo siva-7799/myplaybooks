@@ -1,0 +1,7 @@
+- name: run a task based on another task
+  hosts: all
+  tasks:
+    - name: Run a shell command
+      shell: "false"
+      ignore_errors: yes
+    - debug: msg="Hello"

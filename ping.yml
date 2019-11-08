@@ -1,0 +1,9 @@
+---
+ - hosts: ubutnu
+   tasks:
+   - name: ping ubuntu servers
+     ping:
+ - hosts: redhat
+   tasks:
+   - name: pinging ubntu server
+     ping:

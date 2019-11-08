@@ -1,0 +1,9 @@
+- name: conditions for mltiple tasks can be done with including play
+  hosts: all
+  tasks:
+    - name: include centos play
+      include: plays/centos.yml
+      when: ansible_distribution == "CentOS"
+    - name: include ubuntu play
+      include: plays/ubuntu.yml
+      when: ansible_distibution == "Debian"

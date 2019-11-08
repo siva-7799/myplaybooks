@@ -1,0 +1,19 @@
+---
+- name: playbook for installing, deployment and reunning service
+  hosts: ubuntu
+  tasks:
+  - name: installing apache2
+    apt:
+      name: apache2
+      state: present
+    notify: service restart
+  - name: deployment
+    copy:
+         src: /home/ansible/index.html
+         dest: /var/www/html
+    notify: service restart
+    handlers:
+  - name: service restart
+    service:
+          name: apache2
+          state: restarted

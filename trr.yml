@@ -1,0 +1,15 @@
+---
+ - hosts: ubuntu
+   become: yes
+   vars_prompt:
+       - name: pkg
+         private: no
+         prompt: enter package name
+   tasks:
+       - name: installing "{{pkg}}"
+         sudo: yes
+         apt:
+           name: "{{pkg}}"
+           state: present
+
+

@@ -1,0 +1,8 @@
+- name: Line in file module can add some line into existing file
+  hosts: all
+  tasks:
+    - name: Line in file
+      lineinfile:
+        path: /tmp/file.txt
+        line: 'Hello New World'
+        create: yes

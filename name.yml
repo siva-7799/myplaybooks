@@ -1,0 +1,12 @@
+---
+ - hosts: all
+   tasks:
+   - name: creating multiple uusers
+     user:
+        name: "{{item}}"
+        state: present
+     loop:
+        - shyam
+        - krishna
+        - naga
+        - gummadi

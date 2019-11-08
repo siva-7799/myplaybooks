@@ -1,0 +1,2 @@
+- debug: msg="Task1 on Ubuntu"
+- debug: msg="Task2 on Ubntu"

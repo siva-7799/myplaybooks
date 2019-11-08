@@ -1,0 +1,10 @@
+---
+ - hosts: all
+   tasks:
+   - name: group creation
+     group:
+         name: "devops"
+   - name: user creation
+     user:
+         name: "siiiva"
+         group: devops

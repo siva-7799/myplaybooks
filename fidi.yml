@@ -1,0 +1,11 @@
+---
+ - hosts: all
+   tasks:
+    - name: file creation
+      file: 
+         dest: /home/ansible/1.java
+         state: touch
+    - name: directory creation
+      file:
+         dest: /home/ansible/file1
+         state: directory

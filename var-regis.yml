@@ -1,0 +1,10 @@
+- name: Register variables
+  hosts: all
+  tasks:
+    - name: Execute id command
+      shell: id
+      register: out
+
+    - name: Print registered variable
+      debug:
+       msg: "{{out.stdout}}"
